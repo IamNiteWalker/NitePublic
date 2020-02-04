@@ -17,6 +17,7 @@
 #>
 
 # get ALL
+# Edit : Adi - not true
 $webApps = Get-SPWebApplication
 
 Clear-Host
