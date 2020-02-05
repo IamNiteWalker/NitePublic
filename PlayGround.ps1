@@ -17,20 +17,18 @@
 #>
 
 # get ALL
-# Edit : Adi - not true
+# Edit : Adi - not true ; monty - is toooo
+
 $webApps = Get-SPWebApplication
 
 Clear-Host
-foreach($eachSite in $webApps)
-{
+foreach ($eachSite in $webApps) {
     Write-Host "This is $eachSite, $($eachSite.Id)" -ForegroundColor Green
 
-    foreach($eachSiteCollection in $eachSite.Sites)
-    {
+    foreach ($eachSiteCollection in $eachSite.Sites) {
         Write-Host "`tThis is site collection: $eachSiteCollection, $($eachSiteCollection.ID)" -ForegroundColor Yellow
 
-        foreach($eachSiteCollectionWeb in $eachSiteCollection.AllWebs)
-        {
+        foreach ($eachSiteCollectionWeb in $eachSiteCollection.AllWebs) {
             Write-Host "`t`tThis is site collection web: $eachSiteCollectionWeb, Id = $($eachSiteCollection.ID)" -ForegroundColor Cyan
 
             <#
